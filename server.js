@@ -17,6 +17,43 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(methodOverRide('_method'));
 
+
+//==========(all routes)===========\\
+
+//Hoempage route
+app.get('/', homepageHandler);
+app.get('/dashboard', dashboardHandler);
+
+
+
+
+//==========(route handlers)===========\\
+
+// Homepage handler
+function homepageHandler(request, response) {
+  response.render('./index');
+}
+
+// Dashboard handler
+function dashboardHandler(request, response) {
+  let url = 'https://api.covid19api.com/summary';
+  superagent.get(url)
+    .then(summaryData => {
+      let xmlData = JSON.parse(summaryData.text);
+      let summaryObj = new Summary(xmlData.Global);
+      response.render('./pages/covid19Dashboard', {summary: summaryObj});
+    });
+}
+// C.F
+function Summary(data) {
+  this.NewConfirmed = data.NewConfirmed;
+  this.TotalConfirmed	= data.TotalConfirmed;
+  this.NewDeaths = data.NewDeaths;
+  this.TotalDeaths =	data.TotalDeaths;
+  this.NewRecovered =	data.NewRecovered;
+  this.TotalRecovered =	data.TotalRecovered;
+}
+
 //==========(error handlers)===========\\
 function errorHandler(err, req, res) {
   res.status(500).send(err);

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/The-SuperAgents/covid-19-project#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
     "pg": "^8.0.2",
