@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Dashboard</title>
+</head>
+<body>
+    <section>
+        <div id="globalSummary">
+            <h2>Newly Confirmed Cases: <%= summary.NewConfirmed%></h2>
+            <h2>Total Confirmed Cases: <%= summary.TotalConfirmed%></h2>
+            <h2>Newly Confirmed Deaths: <%= summary.NewDeaths%></h2>
+            <h2>Total Confirmed Deaths: <%= summary.TotalDeaths%></h2>
+            <h2>Newly Recovered Cases: <%= summary.NewRecovered%></h2>
+            <h2>Total Recovered Cases: <%= summary.TotalRecovered%></h2>
+        </div>
+    </section>
+    <section>
+        <form action="/getCountry" method="post">
+            <select name="country">
+                <option value="default">Select Country</option>
+                <%console.log(countries)%>
+                <%countries.forEach(val => {%>
+                    <option value="<%= val.Country%>"><%= val.Country%></option>
+                <%})%>
+            </select>
+        </form>
+    </section>
+    <script src="../script/test.js"></script>
+</body>
+</html>
