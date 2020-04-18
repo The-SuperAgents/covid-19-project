@@ -16,5 +16,17 @@
             <h2>Total Recovered Cases: <%= summary.TotalRecovered%></h2>
         </div>
     </section>
+    <section>
+        <form action="/getCountry" method="post">
+            <select name="country">
+                <option value="default">Select Country</option>
+                <%console.log(countries)%>
+                <%countries.forEach(val => {%>
+                    <option value="<%= val.Country%>"><%= val.Country%></option>
+                <%})%>
+            </select>
+        </form>
+    </section>
+    <script src="../script/test.js"></script>
 </body>
 </html>
