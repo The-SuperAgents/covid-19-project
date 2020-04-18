@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 //========test branch============//
 // test two 
 // 
+=======
+>>>>>>> 588681629c4a8cd8838a016a04f6c7f0d9612892
 //==========(require)===========\\
 require('dotenv').config();
 const express = require('express');
