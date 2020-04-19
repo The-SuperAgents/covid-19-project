@@ -20,12 +20,18 @@ app.use(methodOverRide('_method'));
 app.use(cors());
 
 //==========(all routes)===========\\
-
+///addComent
 //Hoempage route
 app.get('/', homepageHandler);
 app.get('/dashboard', dashboardHandler);
 app.post('/getCountry', countryHandler);
+app.post('/addComent', adviceHandler);
+app.get('/advice', adviceRedirect);
+//advice
 
+function adviceRedirect (request, response){
+response.render('./pages/advice')
+}
 
 
 
@@ -34,8 +40,33 @@ app.post('/getCountry', countryHandler);
 let theSelectedCountry = [];
 // Homepage handler
 function homepageHandler(request, response) {
-  response.render('./index');
+  let key = process.env.NEWS_KEY;
+  let url = `http://newsapi.org/v2/everything?q=covid19&sortBy=publishedAt&apiKey=${key}`;
+  superagent.get(url)
+  .then(newsResult=>{
+    let allNews = newsResult.body.articles.map(val=>{
+     return new News(val)
+    })
+    response.render('./index',{newsResule :allNews });
+  })
 }
+
+// C.F
+let imgPlaceholder = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMnAsE8O7pmDjG3GjTKET3-6m9cI-8V86mVHMQTjS1yOfEjykr&usqp=CAU';
+function News (data) {
+this.author = data.author || '';
+this.title = data.title || '';
+this.url = data.url;
+this.urlToImage = data.urlToImage || imgPlaceholder;
+this.description =data.description || '';
+}
+
+
+
+
+
+
+//===============================================\\
 // Dashboard handler
 function dashboardHandler(request, response) {
   // theSelectedCountry = []
@@ -92,6 +123,31 @@ function SelectedCountry (data) {
   this.Recovered = data.Recovered;
   this.Date = data.Date.slice(0,-10);
 }
+
+//======================(Advice Handler)=========================\\
+
+function adviceHandler (request , response){
+  //collect
+let {name , country , comment} = request.body;
+
+
+let SQL = `INSERT INTO advice (name , country , comment) VALUES ($1,$2,$3);`;
+let SQL2 = `SELECT * FROM advice;`;
+let safeValues = [name , country , comment];
+client.query(SQL,safeValues)
+.then(result=>{
+  // console.log(result.rows);
+  
+  response.render('./pages/advice',{advice : result.rows})
+})
+client.query(SQL2)
+.then()
+
+}
+
+
+
+
 //==========(error handlers)===========\\
 function errorHandler(err, req, res) {
   res.status(500).send(err);

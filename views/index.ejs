@@ -8,8 +8,10 @@
 <body>
     <header>
         <a href="/dashboard">Dashboard</a>
+        <a href="/advice">advice</a>
     </header>
     <main>
+        
     <h1>Working!</h1>
         <!-- data-aos="fade-up" data-aos-duration="3000" -->
         <section class="fade-in">
@@ -42,16 +44,18 @@
             </p>
         </div>
         <div id="section4" class="mainSections">
-            <div class="news">
-            </div>
-            <div class="news">
-            </div>
-            <div class="news">
-            </div>
-            <div class="news">
-            </div>
-            <div class="news">
-            </div>
+
+
+            <%newsResule.forEach( val =>{%>
+
+                <div class="news">
+                   <a href="<%= val.url%>"> <h3><%= val.title%></h3></a>
+                   <p><%= val.author%></p>
+                   <img src="<%= val.urlToImage%>" alt=""> 
+                   <p><%= val.description%></p> 
+                </div>
+           <% })%>
+           
         </div>       
     </main>
     <footer></footer>
