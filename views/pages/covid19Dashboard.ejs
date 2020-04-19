@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 Dashboard</title>
+    <style>
+        /* #canvas {
+            width: 10000px;
+            height: 800px;
+        } */
+    </style>
 </head>
+
 <body>
     <section>
         <div id="globalSummary">
@@ -20,13 +28,20 @@
         <form action="/getCountry" method="post">
             <select name="country">
                 <option value="default">Select Country</option>
-                <%console.log(countries)%>
                 <%countries.forEach(val => {%>
-                    <option value="<%= val.Country%>"><%= val.Country%></option>
+                <option value="<%= val.Country%>"><%= val.Country%></option>
                 <%})%>
             </select>
         </form>
     </section>
+    <section id="canvas">
+        <canvas id="myChart"></canvas>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script type='text/javascript'>
+        var allCountries =<%-JSON.stringify(countries) %>
+    </script>
     <script src="../script/test.js"></script>
 </body>
+
 </html>

@@ -42,7 +42,7 @@ function dashboardHandler(request, response) {
   superagent.get(url)
     .then(summaryData => {
       let xmlData = JSON.parse(summaryData.text);
-      console.log('ddddd', xmlData.Countries);
+    
       let countryData = xmlData.Countries.map(element => {
         return new CounrtySummary(element);
       });
