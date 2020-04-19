@@ -38,6 +38,7 @@ function homepageHandler(request, response) {
 }
 // Dashboard handler
 function dashboardHandler(request, response) {
+  // theSelectedCountry = []
   let url = 'https://api.covid19api.com/summary';
   superagent.get(url)
     .then(summaryData => {
