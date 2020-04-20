@@ -30,7 +30,11 @@ app.get('/advice', adviceRedirect);
 //advice
 
 function adviceRedirect (request, response){
-response.render('./pages/advice')
+  let sql = 'SELECT * FROM advice;';
+  client.query(sql)
+    .then(result =>{
+      response.render('./pages/advice',{allData : result.rows});
+    });
 }
 
 
@@ -43,22 +47,22 @@ function homepageHandler(request, response) {
   let key = process.env.NEWS_KEY;
   let url = `http://newsapi.org/v2/everything?q=covid19&sortBy=publishedAt&apiKey=${key}`;
   superagent.get(url)
-  .then(newsResult=>{
-    let allNews = newsResult.body.articles.map(val=>{
-     return new News(val)
-    })
-    response.render('./index',{newsResule :allNews });
-  })
+    .then(newsResult=>{
+      let allNews = newsResult.body.articles.map(val=>{
+        return new News(val);
+      });
+      response.render('./index',{newsResule :allNews });
+    });
 }
 
 // C.F
 let imgPlaceholder = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMnAsE8O7pmDjG3GjTKET3-6m9cI-8V86mVHMQTjS1yOfEjykr&usqp=CAU';
 function News (data) {
-this.author = data.author || '';
-this.title = data.title || '';
-this.url = data.url;
-this.urlToImage = data.urlToImage || imgPlaceholder;
-this.description =data.description || '';
+  this.author = data.author || '';
+  this.title = data.title || '';
+  this.url = data.url;
+  this.urlToImage = data.urlToImage || imgPlaceholder;
+  this.description =data.description || '';
 }
 
 
@@ -128,24 +132,19 @@ function SelectedCountry (data) {
 
 function adviceHandler (request , response){
   //collect
-let {name , country , comment} = request.body;
-
-
-let SQL = `INSERT INTO advice (name , country , comment) VALUES ($1,$2,$3);`;
-let SQL2 = `SELECT * FROM advice;`;
-let safeValues = [name , country , comment];
-client.query(SQL,safeValues)
-.then(result=>{
-  // console.log(result.rows);
-  
-  response.render('./pages/advice',{advice : result.rows})
-})
-client.query(SQL2)
-.then()
-
+  let {name , country , comment} = request.body;
+  let SQL = `INSERT INTO advice (name , country , comment) VALUES ($1,$2,$3);`;
+  let safeValues = [name , country , comment];
+  client.query(SQL,safeValues)
+    .then(()=>{
+      response.redirect('/advice');
+    });
 }
 
 
+app.get('/form',(req,res)=>{
+  res.render('./pages/form');
+});
 
 
 //==========(error handlers)===========\\
