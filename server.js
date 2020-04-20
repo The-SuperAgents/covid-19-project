@@ -30,6 +30,7 @@ app.get('/advice', adviceRedirect);
 app.get('/update/:commentId', updateCommentHandler);
 app.put('/updateComment/:updateId', updateHandler);
 app.delete('/delete/:deleteId', deleteHandler);
+app.get('/information', infoHandler);
 //advice
 
 function adviceRedirect (request, response){
@@ -181,6 +182,11 @@ function deleteHandler(request, response) {
     .then(() => {
       response.redirect('/advice');
     });
+}
+
+// Hanlde Info Page
+function infoHandler(request, response) {
+  response.render('./pages/information');
 }
 
 //==========(error handlers)===========\\
