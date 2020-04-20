@@ -27,6 +27,9 @@ app.get('/dashboard', dashboardHandler);
 app.post('/getCountry', countryHandler);
 app.post('/addComent', adviceHandler);
 app.get('/advice', adviceRedirect);
+app.get('/update/:commentId', updateCommentHandler);
+app.put('/updateComment/:updateId', updateHandler);
+app.delete('/delete/:deleteId', deleteHandler);
 //advice
 
 function adviceRedirect (request, response){
@@ -146,6 +149,39 @@ app.get('/form',(req,res)=>{
   res.render('./pages/form');
 });
 
+//Handle update comment
+function updateCommentHandler(request, response) {
+  let id = request.params.commentId;
+  let safeValue = [id];
+  let SQL = `SELECT * FROM advice WHERE id = $1;`;
+  client.query(SQL, safeValue)
+    .then(result => {
+      response.render('./pages/update', {data: result.rows[0]});
+    });
+}
+
+//Handle update
+function updateHandler(request, response) {
+  let id = request.params.updateId;
+  let {name , country , comment} = request.body;
+  let SQL = `UPDATE advice set name=$1 , country=$2 , comment=$3 WHERE id = $4;`;
+  let safeValues = [name , country , comment , id];
+  client.query(SQL, safeValues)
+    .then(() => {
+      response.redirect('/advice');
+    });
+}
+
+// Handle Delete
+function deleteHandler(request, response) {
+  let id = request.params.deleteId;
+  let SQL = 'DELETE FROM advice WHERE id = $1;';
+  let safeValue = [id];
+  client.query(SQL, safeValue)
+    .then(() => {
+      response.redirect('/advice');
+    });
+}
 
 //==========(error handlers)===========\\
 function errorHandler(err, req, res) {

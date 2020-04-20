@@ -11,7 +11,10 @@
     <p> <%=val.name%></p>
     <p> <%=val.country%></p>
     <p> <%=val.comment%></p>
-    <button>Edit comment</button>
+    <a href="/update/<%=val.id%>"><button>Edit comment</button></a>
+    <form action="/delete/<%=val.id%>?_method=delete" method="post">
+      <button type="submit">Delete Comment</button>
+    </form>
   <%})%>
   </div>
     
