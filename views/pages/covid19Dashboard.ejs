@@ -5,15 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 Dashboard</title>
-    <style>
-        /* #canvas {
-            width: 10000px;
-            height: 800px;
-        } */
-    </style>
+    <link rel="stylesheet" href="../styles/base.css">
 </head>
 
 <body>
+  <%- include('../partials/header')%>
     <section>
         <div id="globalSummary">
             <h2>Newly Confirmed Cases: <%= summary.NewConfirmed%></h2>
@@ -67,6 +63,33 @@
 
     </script>
     <script src="../script/test.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $('#toggle').click(function () {
+            $(this).toggleClass('active');
+            $('#overlay').toggleClass('open');
+        });
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll > 300) {
+                $(".default-color").css("background-color", "#20202083");
+            }
+
+            else if (scroll === 0) {
+                $(".default-color").css("background-color", "#202020");
+            }
+        })
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-110px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
 </body>
 
 </html>
