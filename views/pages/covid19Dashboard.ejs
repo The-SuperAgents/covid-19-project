@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 Dashboard</title>
     <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 </head>
 
 <body>
@@ -56,6 +57,7 @@
             <%})%>
           </table>
     </section>
+<%- include('../partials/footer')%>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script type='text/javascript'>
         var allCountries =<%-JSON.stringify(countries) %>
@@ -64,32 +66,7 @@
     </script>
     <script src="../script/test.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script>
-        $('#toggle').click(function () {
-            $(this).toggleClass('active');
-            $('#overlay').toggleClass('open');
-        });
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            if (scroll > 300) {
-                $(".default-color").css("background-color", "#20202083");
-            }
-
-            else if (scroll === 0) {
-                $(".default-color").css("background-color", "#202020");
-            }
-        })
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-110px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
+    <script src="../script/header.js"></script>
 </body>
 
 </html>
