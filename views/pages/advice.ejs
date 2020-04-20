@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 WebApp</title>
+</head>
+<body>
+  <div>
+    <%allData.forEach(val=>{%>
+    <p> <%=val.name%></p>
+    <p> <%=val.country%></p>
+    <p> <%=val.comment%></p>
+    <a href="/update/<%=val.id%>"><button>Edit comment</button></a>
+    <form action="/delete/<%=val.id%>?_method=delete" method="post">
+      <button type="submit">Delete Comment</button>
+    </form>
+  <%})%>
+  </div>
+    
+<a href="/form"><button>Add Comment</button></a>
+
+</body>
+</html>
