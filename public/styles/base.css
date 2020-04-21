@@ -42,11 +42,13 @@
         top: 2%;
         left: 2%;
     }
-    h1 {
+    #h1 {
         text-align: center;
         margin-top: 2%;
         font-size: xx-large;
+        color: #ffffff;
     }
+    /*********** Hanburger Menu CSS ***********/
     .button_container {
         position: sticky;
         top: 5%;
@@ -147,25 +149,26 @@
         opacity: 0;
       }
       .overlay ul li a {
-        display: block;
-        position: relative;
-        color: #FFF;
-        text-decoration: none;
-        overflow: hidden;
+        display: block !important;
+        position: relative !important;
+        color: #FFF !important;
+        text-decoration: none !important;
+        overflow: hidden !important;
+        font-size: xxx-large;
       }
       .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
-        width: 100%;
+        width: 100% !important;
       }
       .overlay ul li a:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 0%;
-        transform: translateX(-50%);
-        height: 3px;
-        background: #FFF;
-        transition: .35s;
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        width: 0% !important;
+        transform: translateX(-50%) !important;
+        height: 3px !important;
+        background: #FFF !important;
+        transition: .35s !important;
       }
       
       @keyframes fadeInRight {
@@ -183,3 +186,4 @@
       }
       
 }
+/* =================================================================== */

@@ -7,19 +7,20 @@
         <img id="logo"
             src="https://p2.hiclipart.com/preview/786/850/421/coronavirus-covid-covid19-line-png-clipart-thumbnail.jpg"
             alt="logo">
-        <h1>Covid-19</h1>
+        <h1 id="h1">Covid-19</h1>
         <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span
                 class="bottom"></span></div>
         <div class="overlay" id="overlay">
             <nav class="overlay-menu">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/advice">Advice</a></li>
-                    <li><a href="/information">Information</a></li>
+                    <li><a class="a" href="/">Home</a></li>
+                    <li><a class="a" href="/dashboard">Dashboard</a></li>
+                    <li><a class="a" href="/advice">Advice</a></li>
+                    <li><a class="a" href="/information">Information</a></li>
                 </ul>
             </nav>
         </div>
+        
     </header>
     <main>
 
@@ -29,7 +30,7 @@
             inro
         </section>
         <div id="section1" class="mainSections">
-            <h2>
+            <h2 class="h2">
             </h2>
             <p>
             </p>
@@ -37,7 +38,7 @@
             </p>
         </div>
         <div id="section2" class="mainSections">
-            <h2>
+            <h2 class="h2">
             </h2>
             <p>
             </p>
@@ -46,7 +47,7 @@
             </p>
         </div>
         <div id="section3" class="mainSections">
-            <h2>
+            <h2 class="h2">
             </h2>
             <p>
             </p>
@@ -54,51 +55,19 @@
 
             </p>
         </div>
+        
         <div id="section4" class="mainSections">
+            <div class="wrapper">
 
-
-            <%newsResule.forEach( val =>{%>
-
-            <div class="news">
-                <a href="<%= val.url%>">
-                    <h3><%= val.title%></h3>
-                </a>
-                <p><%= val.author%></p>
-                <img src="<%= val.urlToImage%>" alt="">
-                <p><%= val.description%></p>
-            </div>
-            <% })%>
+              <%- include('partials/news')%>
 
         </div>
     </main>
-    <footer></footer>
+    <%- include('partials/footer')%>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script>
-        $('#toggle').click(function () {
-            $(this).toggleClass('active');
-            $('#overlay').toggleClass('open');
-        });
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            if (scroll > 300) {
-                $(".default-color").css("background-color", "#20202083");
-            }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 
-            else if (scroll === 0) {
-                $(".default-color").css("background-color", "#202020");
-            }
-        })
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-110px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
+    <script src="./script/header.js"></script>
 </body>
 
 </html>
