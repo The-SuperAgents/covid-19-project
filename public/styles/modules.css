@@ -26,7 +26,7 @@ img {
 }
 .news-slider {
   z-index: 2;
-  max-width: 1300px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;

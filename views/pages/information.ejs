@@ -4,9 +4,34 @@
 
 <body>
   <%- include('../partials/header')%>
-    <h1>Test</h1>
+    <main>
+      <section class="intro" class="info-page">  
+        <div class="information">
+          <h2 class="info-h2">You can create full screen sections without javascript.</h2>
+          <p class="info-p">The height is set to 90vh, that means 90% height.</p>
+       </div>
+      </section>
+      
+      <section class="info-page">
+        <div class="content">
+          <h2 class="info-h2">Resize your browser and see how they adapt.</h2>
+       </div>
+      </section>
+      
+      <section class="info-page">  
+        <div class="content">
+          <h2 class="info-h2">It's amazing and fast.</h2>
+       </div>
+      </section>
+      
+      <section class="info-page">  
+        <div class="content">
+          <h2 class="info-h2">See the <a href="http://caniuse.com/#feat=viewport-units">browser support.</a></h2>
+       </div>
+      </section>
+    </main>
 <%- include('../partials/footer')%>
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../script/header.js"></script>
 </body>
 </html>

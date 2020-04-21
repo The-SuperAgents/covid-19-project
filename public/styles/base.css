@@ -14,6 +14,7 @@
         background-color: #121212;
         color: #ffffff;
     }
+
     a {
         text-decoration: none;
         color: #ffffff;
@@ -30,6 +31,8 @@
         position: sticky;
         width: 100%;
         top: 0;
+        z-index: 3;
+        transition: 0.3s all ease-in-out;
     }
     .scrolled-color {
         background-color: #fff !important;
@@ -186,4 +189,4 @@
       }
       
 }
-/* =================================================================== */
+/* =================================================================== sections=========

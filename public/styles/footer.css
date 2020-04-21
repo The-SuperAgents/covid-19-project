@@ -7,9 +7,9 @@ h1, h2, h3, h4, h5, h6 {
 .site-footer {
     color: #c4ccd2;
 }
-*, ::before, ::after {
+/* *, ::before, ::after {
     box-sizing: inherit;
-}
+} */
 .subscribe {
     background-color: #202020;
     padding: 36px 0;
