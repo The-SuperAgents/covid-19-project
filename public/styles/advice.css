@@ -76,8 +76,9 @@ flex-wrap: wrap;
 
 .comment{
     width: 45%;
-
     padding: 0.5em;
+    display: flex;
+    align-items: center;
 }
 
 .addBtn{

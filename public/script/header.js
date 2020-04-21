@@ -13,7 +13,7 @@ $(window).scroll(function () {
   else if (scroll === 0) {
     $(".default-color").css("background-color", "#202020");
   }
-})
+});
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
@@ -24,4 +24,3 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
-
