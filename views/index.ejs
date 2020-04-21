@@ -58,17 +58,7 @@
 
             <%- include('partials/news')%>
 
-            <%newsResule.forEach( val =>{%>
-
-            <div class="news">
-                <a href="<%= val.url%>">
-                    <h3 class="h3"><%= val.title%></h3>
-                </a>
-                <p><%= val.author%></p>
-                <img src="<%= val.urlToImage%>" alt="">
-                <p><%= val.description%></p>
-            </div>
-            <% })%>
+            
 
         </div>
     </main>
