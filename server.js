@@ -31,6 +31,7 @@ app.get('/update/:commentId', updateCommentHandler);
 app.put('/updateComment/:updateId', updateHandler);
 app.delete('/delete/:deleteId', deleteHandler);
 app.get('/information', infoHandler);
+app.get('/', homepageHandler);
 //advice
 
 function adviceRedirect (request, response){

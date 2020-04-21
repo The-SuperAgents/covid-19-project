@@ -197,3 +197,8 @@ function runderChartForSingleCo() {
 runderChartForSingleCo();
 
 
+//=============table for all countryes===========\\
+
+$(document).ready( function () {
+  $('#myTable').DataTable();
+} );

@@ -1,0 +1,39 @@
+#myTable{
+    border: 5px 5px 5px red;
+
+}
+.row{
+    color: black ;
+
+}
+
+#myTable_filter > label {
+    display: inline-table;
+margin-right: 5em;
+margin-top: 5em;
+color: white;
+margin-bottom: 1.5em;
+
+}
+#myTable_length > label {
+    display: inline-table;
+margin-left: 5em;
+margin-top: 5em;
+color: white
+} 
+#myTable_info {
+    color: white;
+margin-left: 5em;
+}
+#myTable_previous{
+    color: white !important;
+    
+}
+.paginate_button {
+    color: white;
+}
+#myTable_next{
+    color: white !important ;
+    margin-right: 3em;
+margin-bottom: 3em;
+}

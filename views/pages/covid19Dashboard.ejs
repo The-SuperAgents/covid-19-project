@@ -7,6 +7,8 @@
     <title>Covid-19 Dashboard</title>
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -39,23 +41,27 @@
         <canvas id="myChart2"></canvas>
     </section>
     <section id="tableSection">
-        <table>
-            
-            <tr>
-              <th>Total Confirmed</th>
-              <th>Total Deaths</th>
-              <th>Total Recovered</th>
-              <th>Date</th>
-            </tr>
-            <%countryArr.forEach(val => {%>
-            <tr>
-            <td><%= val.Confirmed%></td>
-            <td><%= val.Deaths%></td>
-            <td><%= val.Recovered%></td>
-            <td><%= val.Date %></td>
-            <tr>
-            <%})%>
+
+          <table id="myTable" class="display" style="width:90%">
+                   <thead>
+                <tr>
+                   <th>Cuntry Name</th>
+                   <th>Total Confirmed</th>
+                   <th>Total Deaths</th>
+                   <th>Total Recovered</th>
+                     </tr>
+             </thead>
+             <tbody>
+               <%countries.forEach(val => {%>
+                <tr>
+                  <td class="row"><%= val.Country%></td>
+                  <td class="row" ><%= val.TotalConfirmed%></td>
+                  <td class="row" ><%= val.TotalDeaths%></td>
+                  <td class="row" ><%= val.TotalRecovered %></td>
+                      </tr>
+                <%})%>
           </table>
+     
     </section>
 <%- include('../partials/footer')%>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
@@ -64,8 +70,9 @@
         var selectedCo =<%-JSON.stringify(countryArr) %>
 
     </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="../script/test.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../script/header.js"></script>
 </body>
 
