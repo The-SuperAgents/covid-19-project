@@ -24,3 +24,16 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+
+// ================(read more button)==================\\
+
+$('#readmore').on('click', () => {
+  $('#read').toggleClass()
+  if ($('#readmore').text() === 'Show Less'){
+    $('#readmore').text('Show More')
+  }else{
+    $('#readmore').text('Show Less')
+  }
+  
+})

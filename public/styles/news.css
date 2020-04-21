@@ -157,8 +157,9 @@ img {
   display: inline-block;
   opacity: .7;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(245, 127, 127);
   transition: opacity .3s;
+  font-size: 19px;
 }
 @media screen and (max-width: 576px) {
   .news-sub {
@@ -183,7 +184,7 @@ img {
   font-size: 16px;
 }
 .news__title {
-  font-size: 25px;
+  font-size: 20px;
   padding: 0 6px;
   font-weight: 500;
   opacity: .7;
@@ -223,6 +224,7 @@ img {
   .news__img {
     height: 180px;
     margin-top: 20px;
+    margin-bottom: 2em;
   }
 }
 .news__img img {
