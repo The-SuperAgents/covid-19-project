@@ -82,10 +82,12 @@ flex-wrap: wrap;
 }
 
 .addBtn{
-    transition: 0.7s all ease-in-out;
+    transition: 0.3s all ease-in-out;
 }
 .addBtn:hover{
-   transform: scale(1.5);
+   background-color: rgba(114, 132, 179, 0.74);
+   border-color: #2C54C4;
+   border-width: 3px;
 }
 
 .buttonContainer{
@@ -94,3 +96,32 @@ flex-wrap: wrap;
     align-items: center;
 
 }
+
+.editBtn{
+    font-size: 25px;
+    background-color: #53B008;
+    border-radius: 50%;
+    height: 51px;
+    width: 54px;
+    padding-left: 16px;
+    transition: 0.3s all ease-in-out;
+}
+.editBtn:hover{
+    background-color: rgb(134, 185, 92);
+    border-color: #53B008;
+    border-width: 3px;
+ }
+.deleteBtn{
+    font-size: 25px;
+    background-color: rgb(176, 8, 8);
+    border-radius: 50%;
+    height: 51px;
+    width: 54px;
+    padding-left: 16px;
+    transition: 0.3s all ease-in-out;
+}
+.deleteBtn:hover{
+    background-color: rgb(184, 97, 97);
+    border-color: rgb(176, 8, 8);
+    border-width: 3px;
+ }

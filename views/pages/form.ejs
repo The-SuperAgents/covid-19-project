@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head')%>
+
+  <%- include('../partials/head')%>
+
+  <link rel="stylesheet" href="../../styles/form.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'>
+
 
 <body>
   <%- include('../partials/header')%>
-    <form action="/addComent" method="POST">
-        <input type="text" name="name" placeholder="Enter your name">
-        <input type="text" name="country" placeholder="Enter your country">
-        <input type="text" name="comment" placeholder="Add your advice">
-        <input type="submit" value="add">
-    </form>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../script/header.js"></script>
+  <div class="back">
+    <div class="registration-form">
+      <header>
+        <h1>Add Comment</h1>
+        <p>Fill in all informations</p>
+      </header>
+      <form action="/addComent" method="POST">
+
+        <div class="input-section email-section">
+          <input class="email" type="text" name="name" placeholder="Enter your name" autocomplete="off" required>
+          <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o"></i></span><span
+              class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+        </div>
+
+        <div class="input-section password-section folded">
+          <input class="password" type="text" name="country" placeholder="Enter your country" required>
+          <div class="animated-button"><span class="icon-lock"><i class="fa fa-lock"></i></span><span
+              class="next-button password"><i class="fa fa-arrow-up"></i></span></div>
+        </div>
+        
+        <div class="input-section repeat-password-section folded">
+          <input class="repeat-password" type="text" name="comment" placeholder="Add your advice" required>
+          <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-lock"></i></span>
+            <span class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
+        </div>
+
+        <div class="success">
+          <input type="submit" value="Thank You">
+        </div>
+      </form>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="../script/header.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="../script/form.js"></script>
+    </div>
+  </div>
 </body>
-<%- include('../partials/footer')%>
+
 </html>
