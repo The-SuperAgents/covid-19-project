@@ -37,3 +37,65 @@ margin-left: 5em;
     margin-right: 3em;
 margin-bottom: 3em;
 }
+
+/* the global section */
+/* Dashboard Page CSS */
+.dash-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    text-align: center;
+  }
+  #dash-h1, .dash-h2 {
+    color: #fff;
+  }
+  #dash-h1 {
+    font-size: xx-large;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+    color: rgb(86, 221, 221);
+  }
+  .dash-h2 {
+    padding: 3%;
+  }
+  .dash-h2.confirmed {
+    display: inline-flex;
+  }
+  .dash-h2.deaths {
+    display: inline-flex;
+  }
+  .dash-h2.recovered {
+    display: inline-flex;
+  }
+  .Count {
+    margin-left: 0.3em;
+  }
+  select {
+    padding: 13px;
+    border-radius: 2%;
+    margin: 1em;
+    font-family: unset;
+    border: none;
+    color: blue;
+    font-weight: 500;
+    font-size: larger;
+  }
+  #info-submit {
+    margin-top: 1.5em;
+  }
+  #info-submit:hover {
+    background-color: #5492e9cb;
+  }
+  #info-submit {
+    transition: 0.3s all ease-in-out;
+  }
+  .dash-section {
+    margin-bottom: 5em;
+  }
+  
+/* icons */
+.globalSummary{
+display: flex;
+    justify-content: space-around;
+}
