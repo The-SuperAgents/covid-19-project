@@ -32,35 +32,19 @@ function runderChart() {
       datasets: [{
         label: 'countries',
         data: countryArray,
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)'
 
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)'
-
-        ],
         borderWidth: 1
       },
       {
         label: 'total Confirmed',
         data: totalConfirmedArray,
-        backgroundColor: [
-          'rgba(250, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)'
-
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)'
-
-        ],
+        fill: false,
+        borderColor: "#bae755",
+        backgroundColor: "#e755ba",
+        pointBackgroundColor: "#55bae7",
+        pointBorderColor: "#55bae7",
+        pointHoverBackgroundColor: "#55bae7",
+        pointHoverBorderColor: "#55bae7",
         borderWidth: 1
       },
       {
@@ -83,18 +67,14 @@ function runderChart() {
       {
         label: 'Total Recovered',
         data: TotalRecoveredArray,
-        backgroundColor: [
-          'rgba(250, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)'
-
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)'
-
-        ],
+        fill: false,
+        borderColor: "blue",
+  
+        backgroundColor: "blue",
+        pointBackgroundColor: "blue",
+        pointBorderColor: "blue",
+        pointHoverBackgroundColor: "blue",
+        pointHoverBorderColor: "blue",
         borderWidth: 1
       }]
     },
