@@ -20,9 +20,9 @@
         color: #ffffff;
         transition: 0.3s color ease-in-out;
     }
-    a:hover {
+    /* a:hover {
         color: wheat;
-    }
+    } */
     .default-color {
         display: flex;
         /* height: 110px; for descktop */
@@ -349,6 +349,9 @@
       margin: 2em 0em;
     font-size: .5em;
     }
+    #desktop-nav ,#desktop-header{
+      display: none;
+    }
     
 }
 
@@ -363,14 +366,104 @@
       background-color: #121212;
       color: #ffffff;
   }
+
+  /* *************(nav)************* */
+  #desktop-nav{
+    display: flex;
+    justify-content:space-between;
+    background-color: #02081E;
+    min-height: 4.5em;
+  }
+  #containerLogo{
+    width: 25%;
+    display: flex;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+  }
+  #logo{
+    width: 50%
+  }
+  #logo-title{
+    color: cadetblue;
+    line-height: 100%;
+    width: 67%;
+    font-weight: 600;
+    position: relative;
+    right: 1.9em;
+    font-size: 17px;
+  }
+  #desktop-ul{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    padding: 0em 13em;
+    align-items: center;
+  }
+  .desktop-li{
+    line-height: 1;
+    margin: 1.5em;
+    padding: 1.5em 3em;
+    -webkit-transition: 0.25s;
+    transition:  0.25s all ease-in-out;
+
+  }
+  .desktop-li:hover,
+  .desktop-li:focus {
+    box-shadow: inset 0 0 0 3em #71aaca;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s color ease-in-out;
+    font-size: 1.4em;
+  }
+
+  /* ************(header)*********** */
+  #desktop-header{
+    display: flex;
+    justify-content: space-around;
+    background-image: url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F03%2F33%2F50%2F87%2F240_F_333508781_HGq5HdMGz7cCJrTO8265CzHrAcb5guKo.jpg);
+    height: 30.5em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+  }
+  #h1container{
+    width: 50%;
+  }
+  #gif-container{
+    width: 37%;
+    text-align: center;
+    height: 100%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+  }
+  #gif{
+    height: 56%;
+    width: 54%;
+    border-radius: 50%;
+  }
+
+
+  
+
+
+
+
+  /* ***********(end header)********** */
   a {
       text-decoration: none;
       color: #ffffff;
       transition: 0.3s color ease-in-out;
   }
-  a:hover {
+  /* a:hover {
       color: wheat;
-  }
+  } */
   .default-color {
       display: flex;
       /* height: 110px; for descktop */
@@ -387,18 +480,13 @@
       background-color: #fff !important;
       transition: background-color 200ms linear;
     }
-  #logo {
-      width: 50px;
-      height: 50px;
-      position: sticky;
-      top: 2%;
-      left: 2%;
-  }
+ 
   #h1 {
-      text-align: center;
-      margin-top: 2%;
-      font-size: xx-large;
-      color: #ffffff;
+    text-align: right;
+    margin-top: 2%;
+    font-size: xx-large;
+    color: #ffffff;
+    padding: 1em;
   }
   /*********** Hanburger Menu CSS ***********/
   .button_container {
@@ -698,6 +786,10 @@
   .mobile{
     display: none;
   }
+  .default-color {
+    display: none;
+}
+
   
 }
 

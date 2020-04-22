@@ -4,6 +4,7 @@
 <%- include('partials/head')%>
 
 <body>
+    <!-- ************************(mobile view header)************************** -->
     <header class="default-color" id="navbar">
         <img id="logo"
             src="https://p2.hiclipart.com/preview/786/850/421/coronavirus-covid-covid19-line-png-clipart-thumbnail.jpg"
@@ -21,8 +22,32 @@
                 </ul>
             </nav>
         </div>
-        
+
     </header>
+    <!-- *******************************(desktop view)********************************** -->
+
+    <nav id="desktop-nav">
+        <div id="containerLogo">
+            <img id="logo" src="https://media.giphy.com/media/dVuyBgq2z5gVBkFtDc/giphy.gif" alt="logo">
+            <h4 id="logo-title">COVID-19 HUB</h4>
+        </div>
+        <ul id="desktop-ul">
+            <li class="desktop-li"><a class="a" href="/">Home</a></li>
+            <li class="desktop-li"><a class="a" href="/dashboard">Dashboard</a></li>
+            <li class="desktop-li"><a class="a" href="/advice">Advice</a></li>
+        </ul>
+    </nav>
+    <header id="desktop-header">
+        <div id="h1container">
+            <h1 id="h1">Covid-19</h1>
+        </div>
+        <div id="gif-container">
+            <img id="gif" src="https://media.giphy.com/media/dVuyBgq2z5gVBkFtDc/giphy.gif" alt="covid-gif">
+        </div>
+    </header>
+
+    <!-- *********************************************************************************** -->
+
     <main>
         <!-- ========================(content)============================ -->
 
@@ -139,7 +164,7 @@
         </div>
         </section>
         </div>
-        
+
         <div id="section4" class="mainSections">
             <%- include('partials/news')%>
         </div>

@@ -222,7 +222,6 @@ function runderChartForSingleCo() {
         label: 'countries',
         data: dateArray,
 
-
         borderWidth: 1
       },
       {
