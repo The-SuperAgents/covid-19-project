@@ -126,7 +126,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     cursor: pointer;
     border: 0;
     border-radius: 99px;
-    background: #0353c4;
+    background: linear-gradient(to right, rgba(48, 207, 208, 0.4) 0%, rgb(154, 51, 253) 140%) rgb(32, 32, 32);
+
     color: #fff;
     vertical-align: top;
     padding: 0 26px;

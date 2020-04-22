@@ -16,6 +16,7 @@ a, a:hover {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+  color: white;
 }
 img {
   width: 100%;
@@ -71,7 +72,7 @@ img {
   z-index: 12;
 }
 .news-slider__arrow {
-  background: #fff;
+  background: linear-gradient(to right, rgba(48, 207, 208, 0.4) 0%, rgb(154, 51, 253) 140%) rgb(32, 32, 32);
   border: none;
   display: inline-flex;
   width: 10px;
