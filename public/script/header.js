@@ -56,7 +56,7 @@ $(window).scroll(function () {
   }
 
   else if (scroll === 0) {
-    $('#desktop-nav').css('height', '4.82em');
+    $('#desktop-nav').css('height', '7.125em');
     $('#desktop-nav').css('background', '#02081E');
     $('#desktop-nav').css('box-shadow', 'none');
   }

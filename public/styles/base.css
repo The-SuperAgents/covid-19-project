@@ -380,8 +380,9 @@
     justify-content:space-between;
     background-color: #02081E;
     min-height: 4.5em;
-    position: sticky;
+    position: fixed;
     top: 0;
+    transition: 0.5s all ease-in-out;
     z-index: 99999;
     width: 100%;
 
@@ -413,7 +414,7 @@
   #desktop-ul{
     display: flex;
     justify-content: space-between;
-    width: 45%;
+    width: 50%;
     padding: 0em 0em;
     align-items: center;
   }
@@ -422,7 +423,7 @@
     margin: 1em;
     padding: 1.5em 3em;
     -webkit-transition: 0.25s;
-    transition:  0.25s all ease-in-out;
+    transition:  0.5s all ease-in-out;
 
   }
   .desktop-li:hover,
@@ -444,7 +445,7 @@
     display: flex;
     justify-content: space-around;
     background-image: url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F03%2F33%2F50%2F87%2F240_F_333508781_HGq5HdMGz7cCJrTO8265CzHrAcb5guKo.jpg);
-    height: 30.5em;
+    height: 39em;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
