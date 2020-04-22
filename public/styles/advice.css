@@ -4,11 +4,11 @@
         display: none;
     }
 .container{
-   display: grid;
-   margin-top: 3%;
-   margin-bottom: 3%;
-   justify-items: center;
-   align-items: center;
+    display: grid;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    justify-items: center;
+    align-items: center;
 }
 
 .adviceSections{
@@ -16,6 +16,7 @@
     width: 90%;
     padding: 3% 1%;
     margin-top: 50px;
+    box-shadow: 3px 4px 12px #888888;
     margin-bottom: 50px;
     /* border-radius: 5%; */
     background-color: #35353566;
@@ -114,10 +115,11 @@ flex-wrap: wrap;
 
 .editBtn{
     font-size: 25px;
-    background-color: #53B008;
+    background-color: #53B008 !important;
     border-radius: 50%;
     height: 51px;
     width: 54px;
+
     padding-left: 16px;
     transition: 0.3s all ease-in-out;
 }

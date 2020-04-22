@@ -5,7 +5,12 @@
 /* font-family: 'Open Sans', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 /* Mobile View */
+
+
 @media(min-width: 360px) and (max-width: 768px){
+  p,h1,h2,h3,h4,h5,h6,a,span,div,section{
+    font-family: Open Sans', sans-serif;
+  }
   .sliderAdv{
     display: none;
 }
@@ -420,6 +425,7 @@
     display: flex;
     justify-content: space-between;
     width: 50%;
+    list-style: none;
     padding: 0em 0em;
     align-items: center;
   }
@@ -851,6 +857,10 @@ height: 75%;
   text-transform: lowercase ;
   text-align: left;
   font-family: 'Lato', sans-serif;
+}
+
+p,h1,h2,h3,h4,h5,h6,a,span,div,section{
+  font-family: 'Open Sans', 'sans-serif';
 }
 }
 

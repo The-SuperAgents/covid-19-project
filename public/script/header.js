@@ -48,7 +48,7 @@ $(window).scroll(function () {
   var scroll = $(window).scrollTop();
 
 
-  if (scroll > 200) {
+  if (scroll > 50) {
     $('#desktop-nav').css('height', '2em');
     $('#desktop-nav').css('background', '#202020ab');
     $('#desktop-nav').css('box-shadow', '6px 6px 6px #1d1c1c91');
