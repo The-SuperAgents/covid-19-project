@@ -1,5 +1,5 @@
 
-
+@media(min-width: 769px) {
 .container{
    display: grid;
    margin-top: 3%;
@@ -43,6 +43,14 @@ flex-wrap: wrap;
     /* transition: 0.8s all ease-in-out; */
 
 }
+.imgs-blue{
+    width: 25%;
+    margin: 1em; 
+}
+.imgs-green{
+    width: 25%;
+    margin: 1em; 
+}
 
 .imgs:hover{
 
@@ -72,8 +80,11 @@ flex-wrap: wrap;
 
 .profileImage{
     width: 3em;
+    height: 69%;
 }
-
+.edit{
+    margin: 0px 5%;
+}
 .comment{
     width: 45%;
     padding: 0.5em;
@@ -92,7 +103,7 @@ flex-wrap: wrap;
 
 .buttonContainer{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
 
 }
@@ -124,4 +135,154 @@ flex-wrap: wrap;
     background-color: rgb(184, 97, 97);
     border-color: rgb(176, 8, 8);
     border-width: 3px;
+ }
+ .mobile{
+     display: none;
+ }
+}
+ @media(min-width: 360px) and (max-width: 768px){
+.container{
+   display: grid;
+   margin-top: 3%;
+   margin-bottom: 3%;
+   justify-items: center;
+   align-items: center;
+}
+
+.adviceSections{
+    /* height: 80vh; */
+    width: 90%;
+    padding: 3% 1%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border-radius: 5%; */
+    background-color: #35353566;
+}
+
+.videos{
+    display: flex;
+    border: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+#firstVedio , #secVedio {
+    height: 16em;
+    width: 80%;
+    margin: 1em auto;
+}
+
+.photos{
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
+
+.imgs{
+    height: 50vh;
+    width: 25%;
+     margin: 1em; 
+    /* transition: 0.8s all ease-in-out; */
+
+}
+.imgs-blue{
+    width: 45%;
+    margin: .5em;
+}
+.imgs-green{
+    width: 45%;
+    margin: .5em;
+}
+
+.imgs:hover{
+
+    box-shadow: 10px 10px 5px rgb(0, 0, 0);
+    /* cursor: pointer; */
+    /* transform: scale(0.7); */
+}
+
+
+
+.addedComment{
+    text-align: center;
+    padding: 1em;
+    color: black;
+    background-color: #232630;
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.theCommentDivs{
+    width: 25%;
+
+    padding: 0.5em;
+}
+
+.profileImage{
+    width: 3em;
+    height: 69%;
+}
+.edit{
+    margin: 0px 5%;
+}
+.comment{
+    width: 45%;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+.addBtn{
+    transition: 0.3s all ease-in-out;
+}
+.addBtn:hover{
+   background-color: rgba(114, 132, 179, 0.74);
+   border-color: #2C54C4;
+   border-width: 3px;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.editBtn{
+    font-size: 25px;
+    background-color: #53B008;
+    border-radius: 50%;
+    height: 51px;
+    width: 54px;
+    padding-left: 16px;
+    transition: 0.3s all ease-in-out;
+}
+.editBtn:hover{
+    background-color: rgb(134, 185, 92);
+    border-color: #53B008;
+    border-width: 3px;
+ }
+.deleteBtn{
+    font-size: 25px;
+    background-color: rgb(176, 8, 8);
+    border-radius: 50%;
+    height: 51px;
+    width: 54px;
+    padding-left: 16px;
+    transition: 0.3s all ease-in-out;
+}
+.deleteBtn:hover{
+    background-color: rgb(184, 97, 97);
+    border-color: rgb(176, 8, 8);
+    border-width: 3px;
+ }
+.mobile{
+    display: block;
+}
+footer{
+    display: none;
+}
  }

@@ -16,30 +16,32 @@
 
     <section class="adviceSections photos">
 
-      <img data-aos="fade-right" data-aos-duration="1500" class="imgs " src="../../styles/images/blue-1.png"
+      <img data-aos="fade-right" data-aos-duration="1500" class="imgs-green" src="../../styles/images/handshaking.png"
         alt="advice">
 
-      <img data-aos="flip-up" data-aos-duration="1500" class="imgs " src="../../styles/images/blue-2.png" alt="advice">
-
-      <img data-aos="fade-left" data-aos-duration="1500" class="imgs " src="../../styles/images/blue-3.png"
+      <img data-aos="flip-up" data-aos-duration="1500" class="imgs-green" src="../../styles/images/safe-greetings.png"
         alt="advice">
 
-      <img data-aos="fade-right" data-aos-duration="1500" class="imgs"
+      <img data-aos="fade-left" data-aos-duration="1500" class="imgs-green" src="../../styles/images/wearing-gloves.png"
+        alt="advice">
+      <img data-aos="fade-right" data-aos-duration="1500" class="imgs-green"
         src="../../styles/images/eng-mythbusting-ncov-(13).png" alt="advice">
 
-      <img data-aos="flip-up" data-aos-duration="1500" class="imgs "
+      <img data-aos="flip-up" data-aos-duration="1500" class="imgs-green"
         src="../../styles/images/eng-mythbusting-ncov-(19).png" alt="advice">
 
-      <img data-aos="fade-left" data-aos-duration="1500" class="imgs "
+      <img data-aos="fade-left" data-aos-duration="1500" class="imgs-green"
         src="../../styles/images/eng-mythbusting-ncov-(23).png" alt="advice">
 
-      <img data-aos="fade-right" data-aos-duration="1500" class="imgs " src="../../styles/images/handshaking.png"
+
+
+      <img data-aos="fade-right" data-aos-duration="1500" class="imgs-blue" src="../../styles/images/blue-1.png"
         alt="advice">
 
-      <img data-aos="flip-up" data-aos-duration="1500" class="imgs " src="../../styles/images/safe-greetings.png"
+      <img data-aos="flip-up" data-aos-duration="1500" class="imgs-blue" src="../../styles/images/blue-2.png"
         alt="advice">
 
-      <img data-aos="fade-left" data-aos-duration="1500" class="imgs " src="../../styles/images/wearing-gloves.png"
+      <img data-aos="fade-left" data-aos-duration="1500" class="imgs-blue" src="../../styles/images/blue-3.png"
         alt="advice">
 
     </section>
@@ -50,15 +52,18 @@
       <%allData.forEach(val=>{%>
       <div class="addedComment">
         <div class="profileContainer theCommentDivs">
-          <img style="width: 5em;" class="profileImage" src="https://www.voanews.com/themes/custom/voa/images/Author__Placeholder.png" alt="profilePlacholder">
+          <img style="width: 5em;" class="profileImage"
+            src="https://www.voanews.com/themes/custom/voa/images/Author__Placeholder.png" alt="profilePlacholder">
           <p class="name"> <%=val.name%></p>
           <p class="country"> <%=val.country%></p>
         </div>
         <p class="comment theCommentDivs"> <%=val.comment%></p>
         <div class="buttonContainer theCommentDivs">
-          <a href="/update/<%=val.id%>"><button class="editBtn" style='font-size:24px'><i class='fas fa-edit'></i></button></a>
+          <a class="edit" href="/update/<%=val.id%>"><button class="editBtn" style='font-size:24px'><i
+                class='fas fa-edit'></i></button></a>
           <form action="/delete/<%=val.id%>?_method=delete" method="post">
-            <button type="submit" class="deleteBtn" style='font-size:24px'><i class='fas fa-trash-alt'></i></button>
+            <button type="submit" class="deleteBtn edit" style='font-size:24px'><i
+                class='fas fa-trash-alt'></i></button>
           </form>
         </div>
       </div>
@@ -66,7 +71,9 @@
     </section>
     <a href="/form"><button class="addBtn">Add Comment</button></a>
   </div>
-
+  <div class="mobile">
+    Copyright © 2020 Nextend. All rights reserved.
+</div>
   <%- include('../partials/footer')%>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="../script/header.js"></script>
