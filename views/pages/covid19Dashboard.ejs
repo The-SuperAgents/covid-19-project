@@ -16,7 +16,7 @@
   <%- include('../partials/header')%>
   <section class="dash-section">
     <div id="globalSummary">
-        <h1 id="dash-h1">Global Stats:</h1>
+        <h2 id="dash-h1" class="dashbordH2" >Global Stats</h2>
         <div class="threeIcons" >
             <img class="countIcons" src="../../styles/images/person.png" alt="" style="height: 7em;">
             <h2 class="dash-h2 confirmed">Total Confirmed Cases: <span class="Count"><%= summary.TotalConfirmed%></span></h2>
@@ -34,7 +34,11 @@
         </div>
     </div>
 </section>
+<h2  class="dashbordH2" >Top ten most-affected countries</h2>
+
 <div class="containerCanvas" >
+
+
     <section id="canvas" data-aos="fade-right">
         <canvas id="myChart"></canvas>
     </section>
@@ -45,8 +49,10 @@
 </div>
     <section id="tableSection"  data-aos="zoom-in">
 
+        <h2  class="dashbordH2" >  Reported Cases and Deaths by Country</h2>
+
           <table id="myTable" class="display" style="width:90%">
-                   <thead>
+                   <thead id="table-head">
                 <tr>
                    <th>Cuntry Name</th>
                    <th>Total Confirmed</th>
