@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/table.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,41 +17,33 @@
   <section class="dash-section">
     <div id="globalSummary">
         <h1 id="dash-h1">Global Stats:</h1>
-        <div class="threeIcons">
-            <img src="../../styles/images/person.png" alt="" style="height: 7em;">
+        <div class="threeIcons" >
+            <img class="countIcons" src="../../styles/images/person.png" alt="" style="height: 7em;">
             <h2 class="dash-h2 confirmed">Total Confirmed Cases: <span class="Count"><%= summary.TotalConfirmed%></span></h2>
             <h2 class="dash-h2 confirmed">Newly Confirmed Cases: <span class="Count"><%= summary.NewConfirmed%></span></h2>
         </div>
         <div>
-            <img src="../../styles/images/love.png" alt="" style="height: 7em;">
+            <img class="countIcons" src="../../styles/images/love.png" alt="" style="height: 7em;">
             <h2 class="dash-h2 recovered">Total Recovered Cases: <span class="Count"><%= summary.TotalRecovered%></span></h2>
             <h2 class="dash-h2 recovered">Newly Recovered Cases: <span class="Count"><%= summary.NewRecovered%></span></h2>
         </div>
         <div>
-            <img src="../../styles/images/tombstone.png" alt="" style="height: 7em;">
+            <img class="countIcons" src="../../styles/images/tombstone.png" alt="" style="height: 7em;">
             <h2 class="dash-h2 deaths">Total Confirmed Deaths: <span class="Count"> <%= summary.TotalDeaths%></span></h2>
             <h2 class="dash-h2 deaths">Newly Confirmed Deaths: <span class="Count"> <%= summary.NewDeaths%></span></h2>
         </div>
     </div>
 </section>
-    <section>
-        <form action="/getCountry" method="post">
-            <select name="country">
-                <option value="default">Select Country</option>
-                <%countries.forEach(val => {%>
-                <option value="<%= val.Country%>"><%= val.Country%></option>
-                <%})%>
-            </select>
-            <input type="submit" value="Show Results">
-        </form>
-    </section>
-    <section id="canvas">
+<div class="containerCanvas" >
+    <section id="canvas" data-aos="fade-right">
         <canvas id="myChart"></canvas>
     </section>
-    <section id="canvas2">
-        <canvas id="myChart2"></canvas>
+
+    <section id="canvas3" data-aos="fade-left">
+        <canvas id="myChart3"></canvas>
     </section>
-    <section id="tableSection">
+</div>
+    <section id="tableSection"  data-aos="zoom-in">
 
           <table id="myTable" class="display" style="width:90%">
                    <thead>
@@ -73,6 +66,23 @@
           </table>
      
     </section>
+
+    <section id="formSection">
+        <form action="/getCountry" method="post">
+            <select id="countrySelect" name="country" required>
+                <option value="default">Select Country</option>
+                <%countries.forEach(val => {%>
+                <option value="<%= val.Country%>" ><%= val.Country%></option>
+                <%})%>
+            </select>
+            <input id="submitBtn" type="submit" value="Show Results" id="showChart">
+        </form>
+    </section>
+
+    <section id="canvas2">
+        <canvas id="myChart2"></canvas>
+    </section>
+    
 <%- include('../partials/footer')%>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script type='text/javascript'>
@@ -84,6 +94,10 @@
      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="../script/test.js"></script>
     <script src="../script/header.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

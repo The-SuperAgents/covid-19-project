@@ -216,9 +216,9 @@ flex-wrap: wrap;
 }
 
 .theCommentDivs{
-    width: 25%;
-
+    width: 17%;
     padding: 0.5em;
+    height: 2%;
 }
 
 .profileImage{
@@ -227,6 +227,7 @@ flex-wrap: wrap;
 }
 .edit{
     margin: 0px 5%;
+    
 }
 .comment{
     width: 45%;
