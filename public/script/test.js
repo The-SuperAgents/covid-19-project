@@ -222,7 +222,6 @@ function runderChartForSingleCo() {
         label: 'countries',
         data: dateArray,
 
-
         borderWidth: 1
       },
       {
@@ -275,7 +274,7 @@ $(document).ready( function () {
 $('.Count').each(function () {
   var $this = $(this);
   jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
-    duration: 1000,
+    duration: 3000,
     easing: 'swing',
     step: function () {
       $this.text(Math.ceil(this.Counter));
