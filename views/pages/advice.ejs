@@ -5,16 +5,119 @@
 <body>
   <%- include('../partials/header')%>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://kenwheeler.github.io/slick/slick/slick.css">
+  <link rel="stylesheet" href="../../styles/gallerSlider.css">
 
   <div class="container">
     <section class="adviceSections videos">
+      <h3 class="h3Advice">How To Prevent Corona-Virus</h3>
       <iframe id="firstVedio" src="https://www.youtube.com/embed/1APwq1df6Mw" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <iframe id="secVedio" src="https://www.youtube.com/embed/9Ay4u7OYOhA" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
-    <section class="adviceSections photos">
+    <section class="adviceSections sliderAdv">
+      <!-- .container -->
+<div class="sliderContainer">
+
+<!-- .gallery-slider -->
+<div class="gallery-slider">
+    <h3 class="h3Slider">WHO Advice</h3>
+  <!-- __images -->
+  <div class="gallery-slider__images">
+    <div>
+      <!-- .item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/eng-mythbusting-ncov-(13).png" alt="advicePic 5"></div>
+      </div>
+      <!-- /.item -->
+      <!-- .item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/eng-mythbusting-ncov-(19).png" alt="advicePic 6"></div>
+      </div>
+      <!-- /.item -->
+      <!-- .item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/eng-mythbusting-ncov-(23).png" alt="advicePic 7"></div>
+      </div>
+      <!-- /.item -->
+      <!-- .item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/handshaking.png" alt="advicePic 8"></div>
+      </div>
+      <!-- /.item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/safe-greetings.png" alt="advicePic 8"></div>
+      </div>
+      <!-- /.item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/wearing-gloves.png" alt="advicePic 8"></div>
+      </div>
+      <!-- /.item -->
+    </div>
+  </div>
+  <!-- /__images -->
+
+
+  <!-- __thumbnails -->
+  <div class="gallery-slider__thumbnails">
+    <div>
+      <!-- .item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/eng-mythbusting-ncov-(13).png" alt="advicePic 5"></div>
+      </div>
+      <!-- /.item -->
+      <!-- .item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/eng-mythbusting-ncov-(19).png" alt="advicePic 6"></div>
+      </div>
+      <!-- /.item -->
+      <!-- .item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/eng-mythbusting-ncov-(23).png" alt="advicePic 7"></div>
+      </div>
+      <!-- /.item -->
+      <!-- .item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/handshaking.png" alt="advicePic 8"></div>
+      </div>
+      <!-- /.item -->
+      <!-- .item -->
+      <div class="item">
+          <div class="img-fill"><img src="../../styles/images/safe-greetings.png" alt="advicePic 8"></div>
+      </div>
+     <!-- /.item -->
+     <!-- .item -->
+      <div class="item">
+        <div class="img-fill"><img src="../../styles/images/wearing-gloves.png" alt="advicePic 8"></div>
+      </div>
+      <!-- /.item -->
+    </div>
+
+    <button class="prev-arrow slick-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1792">
+        <path fill="#fff" d="M1171 301L640 832l531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19L173 877q-19-19-19-45t19-45L915 45q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z" />
+      </svg>
+    </button>
+    <button class="next-arrow slick-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1792">
+        <path fill="#fff" d="M1107 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45L275 45q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z" />
+      </svg>
+    </button>
+  </div>
+  <!-- /__thumbnails -->
+
+</div>
+<!-- /.gallery-slider -->
+
+</div>
+<!-- /.container -->
+</section>
+  
+
+
+    <!-- <section class="adviceSections photos phoneDisplay">
 
       <img data-aos="fade-right" data-aos-duration="1500" class="imgs-green" src="../../styles/images/handshaking.png"
         alt="advice">
@@ -44,7 +147,7 @@
       <img data-aos="fade-left" data-aos-duration="1500" class="imgs-blue" src="../../styles/images/blue-3.png"
         alt="advice">
 
-    </section>
+    </section> -->
 
     <section class="adviceSections comments">
 
@@ -78,6 +181,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="../script/header.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+  <script src="../script/gallerSlider.js"></script>
   <script>
     AOS.init();
   </script>

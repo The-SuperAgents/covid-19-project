@@ -6,6 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 /* Mobile View */
 @media(min-width: 360px) and (max-width: 768px){
+  .sliderAdv{
+    display: none;
+}
     body {
         margin: 0 auto;
         width: 100%;
@@ -355,6 +358,9 @@
 /* ***************(desktop version)************* */
 
 @media(min-width: 769px) {
+  .phoneDisplay{
+    display: none;
+}
   body {
       margin: 0 auto;
       width: 100%;
