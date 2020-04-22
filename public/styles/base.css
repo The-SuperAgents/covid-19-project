@@ -371,6 +371,7 @@
       font-family: 'Lato', sans-serif;
       background-color: #121212;
       color: #ffffff;
+      position: absolute;
   }
 
   /* *************(nav)************* */
@@ -379,6 +380,11 @@
     justify-content:space-between;
     background-color: #02081E;
     min-height: 4.5em;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+
   }
   #containerLogo{
     width: 25%;
@@ -407,8 +413,8 @@
   #desktop-ul{
     display: flex;
     justify-content: space-between;
-    width: 40%;
-    padding: 0em 5em;
+    width: 45%;
+    padding: 0em 0em;
     align-items: center;
   }
   .desktop-li{
@@ -442,6 +448,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
+    /* margin-top: 4em; */
   }
   #h1container{
     width: 50%;
@@ -449,10 +456,13 @@
   #gif-container{
     width: 37%;
     text-align: center;
-    height: 100%;
+    height: 53%;
     justify-content: space-around;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    line-height: 150%;
+    font-size: x-large;
+    text-shadow: 1px 1px 2px;
   }
   #gif{
     height: 56%;
@@ -543,7 +553,7 @@
       top: 22px;
     }
     
-    .overlay {
+    /* .overlay {
       position: fixed;
       background: #202020;
       top: 0;
@@ -620,7 +630,7 @@
       height: 3px !important;
       background: #FFF !important;
       transition: .35s !important;
-    }
+    } */
     
     @keyframes fadeInRight {
       0% {
