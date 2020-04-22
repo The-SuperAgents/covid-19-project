@@ -9,7 +9,17 @@
 
 @media(min-width: 360px) and (max-width: 768px){
   p,h1,h2,h3,h4,h5,h6,a,span,div,section{
-    font-family: Open Sans', sans-serif;
+    font-family: 'Open Sans', 'sans-serif';
+  }
+  .twoContent > img{
+    width: 640px;
+    background-color: cadetblue;
+    transition: .5s all ease-in-out;
+  }
+  
+  .news-slider__item{
+    overflow: hidden;
+    padding-bottom: 1em;
   }
   .sliderAdv{
     display: none;
