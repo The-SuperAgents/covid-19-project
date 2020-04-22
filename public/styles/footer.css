@@ -1,0 +1,313 @@
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    line-height: 1.3em;
+    color: #283f4d;
+    font-weight: 400;
+}
+.site-footer {
+    color: #c4ccd2;
+}
+/* *, ::before, ::after {
+    box-sizing: inherit;
+} */
+.subscribe {
+    background-color: #202020;
+    padding: 36px 0;
+}
+.subscribe > .block-1200 {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+}
+.block-1200 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.subscribe > .block-1200 > div {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    text-align: left;
+}
+.subscribe .social {
+    margin-right: 2px;
+    padding-right: 30px;
+}
+.subscribe > .block-1200 > div > div {
+    margin-right: auto;
+}
+.subscribe h6 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+}
+.subscribe p {
+    margin: 0;
+    font-size: 16px;
+}
+a {
+    color: #006aff;
+    text-decoration: none;
+    outline: 0;
+}
+/* .subscribe .n2-social-button-facebook {
+    background-image: url(images/facebook.png);
+}
+.subscribe .n2-social-button-twitter {
+    background-image: url(images/twitter.png);
+}
+.subscribe .n2-social-button {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: no-repeat center center;
+        background-image: none;
+    margin: 10px;
+    overflow: hidden;
+    text-indent: -1000px;
+} */
+.subscribe > .block-1200 > div {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    text-align: left;
+}
+.subscribe > .block-1200 > div > div {
+    margin-right: auto;
+}
+.subscribe h6 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+}
+h6 {
+   clear: both;
+   line-height: 1.3em;
+   color: #283f4d;
+   font-weight: 400;
+}
+.subscribe p {
+    margin: 0;
+    font-size: 16px;
+}
+.subscribe .newsletter form {
+    text-align: right;
+}
+label {
+    cursor: default;
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+}
+.subscribe .newsletter input[type="email"] {
+    height: 44px;
+    padding: 0 20px;
+    line-height: 44px;
+    border-top-left-radius: 99px;
+    border-bottom-left-radius: 99px;
+    border: 0;
+    vertical-align: top;
+    width: 11vw;
+font-family: Proxima,Helvetica,sans-serif;
+font-size: 1rem;
+}
+button, input {
+    overflow: visible;
+}
+.subscribe .newsletter input[type="submit"] {
+    border-radius: 0 99px 99px 0;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 99px;
+    background: linear-gradient(to right, rgba(48, 207, 208, 0.4) 0%, rgb(154, 51, 253) 140%) rgb(32, 32, 32);
+
+    color: #fff;
+    vertical-align: top;
+    padding: 0 26px;
+    font-size: 16px;
+    outline: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+font-family: Proxima,Helvetica,sans-serif;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+.nextend-info {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(32,32,32,1) 0%, rgba(50,48,48,1) 100%);
+    padding: 50px 20px;
+}
+.nextend-info > div.block-1200 {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+.block-1200 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nextend-info .about-us {
+    max-width: 440px;
+    padding-right: 60px;
+}
+.nextend-info > div > div {
+    flex: 1 1 auto;
+    text-align: left;
+}
+.nextend-info img {
+    display: block;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+img {
+    border-style: none;
+}
+.nextend-info p {
+    margin: 10px 0 0;
+display: block;
+margin-block-start: 1em;
+margin-block-end: 1em;
+}
+.nextend-info p, .nextend-info a {
+    color: #c4ccd2;
+    text-align: left;
+    font-size: 16px;
+    line-height: 2;
+}
+.nextend-info .info-col {
+    padding: 0 15px;
+}
+.nextend-info > div > div {
+    flex: 1 1 auto;
+    text-align: left;
+}
+.nextend-info h6 {
+    font-size: 18px;
+    color: #fff;
+    margin: 30px 0 15px;
+}
+.nextend-info hr {
+    width: 40px;
+    height: 3px;
+    background: #23354d;
+    margin: 0 0 14px;
+}
+hr {
+    background-color: #e2f1f9;
+    border: 0;
+    height: 2px;
+    margin: 20px 0;
+    box-sizing: content-box;
+    overflow: visible;
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    color: gray;
+    -moz-float-edge: margin-box;
+}
+.nextend-info ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul {
+    counter-reset: list-item;
+    font-size: 18px;
+}
+.nextend-info ul li {
+    padding: 0;
+}
+li {
+    display: list-item;
+    text-align: match-parent;
+}
+::marker {
+    text-align: end;
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+}
+.nextend-info p, .nextend-info a {
+    color: #c4ccd2;
+    text-align: left;
+    font-size: 16px;
+    line-height: 2;
+}
+a {
+    text-decoration: none;
+    outline: 0;
+}
+.nextend-info h6 {
+    font-size: 18px;
+    color: #fff;
+    margin: 30px 0 15px;
+}
+.nextend-info hr {
+    width: 40px;
+    height: 3px;
+    background: #23354d;
+    margin: 0 0 14px;
+}
+.nextend-info ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nextend-info .info-col {
+    padding: 0 15px;
+}
+.nextend-info > div > div {
+    flex: 1 1 auto;
+    text-align: left;
+}
+.nextend-info ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nextend-info .info-col {
+    padding: 0 15px;
+}
+.nextend-info > div > div {
+    flex: 1 1 auto;
+    text-align: left;
+}
+.site-info {
+    clear: both;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    background-color: #202020b6;
+    line-height: 60px;
+    color: #c4ccd2;
+}
+.subscribe .n2-social-button {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: no-repeat center center;
+        background-image: none;
+    margin: 10px;
+    overflow: hidden;
+    text-indent: -1000px;
+}
+.subscribe .n2-social-button-facebook {
+    background-image: url(https://smartslider3.com/wp-content/themes/ss/images/Facebook.png?1540884759);
+}
+.subscribe .n2-social-button-twitter {
+    background-image: url(https://smartslider3.com/wp-content/themes/ss/images/Twitter.png?1540884759);
+}
+

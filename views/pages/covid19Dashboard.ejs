@@ -5,68 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid-19 Dashboard</title>
-    <style>
-        /* #canvas {
-            width: 10000px;
-            height: 800px;
-        } */
-    </style>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <section>
-        <div id="globalSummary">
-            <h2>Newly Confirmed Cases: <%= summary.NewConfirmed%></h2>
-            <h2>Total Confirmed Cases: <%= summary.TotalConfirmed%></h2>
-            <h2>Newly Confirmed Deaths: <%= summary.NewDeaths%></h2>
-            <h2>Total Confirmed Deaths: <%= summary.TotalDeaths%></h2>
-            <h2>Newly Recovered Cases: <%= summary.NewRecovered%></h2>
-            <h2>Total Recovered Cases: <%= summary.TotalRecovered%></h2>
+  <%- include('../partials/header')%>
+  <nav id="desktop-nav">
+    <div id="containerLogo">
+        <a href="/" id="logoLink"> <img id="logo" src="../styles/images/oie_trans.gif"
+                alt="logo">
+        </a>
+        <h4 id="logo-title">COVID-19 HUB</h4>
+    </div>
+    <ul id="desktop-ul">
+        <li class="desktop-li"><a class="a" href="/">Home</a></li>
+        <li class="desktop-li"><a class="a" href="/dashboard">Dashboard</a></li>
+        <li class="desktop-li"><a class="a" href="/advice">Advice</a></li>
+
+    </ul>
+</nav>
+  <section class="dash-section">
+    <div id="globalSummary">
+        <h2 id="dash-h1" class="dashbordH2" >Global Stats</h2>
+        <div class="threeIcons" >
+            <img class="countIcons" src="../../styles/images/person.png" alt="" style="height: 7em;">
+            <h2 class="dash-h2 confirmed">Total Confirmed Cases: <span class="Count"><%= summary.TotalConfirmed%></span></h2>
+            <h2 class="dash-h2 confirmed">Newly Confirmed Cases: <span class="Count"><%= summary.NewConfirmed%></span></h2>
         </div>
-    </section>
-    <section>
-        <form action="/getCountry" method="post">
-            <select name="country">
-                <option value="default">Select Country</option>
-                <%countries.forEach(val => {%>
-                <option value="<%= val.Country%>"><%= val.Country%></option>
-                <%})%>
-            </select>
-            <input type="submit" value="Show Results">
-        </form>
-    </section>
-    <section id="canvas">
+        <div>
+            <img class="countIcons" src="../../styles/images/love.png" alt="" style="height: 7em;">
+            <h2 class="dash-h2 recovered">Total Recovered Cases: <span class="Count"><%= summary.TotalRecovered%></span></h2>
+            <h2 class="dash-h2 recovered">Newly Recovered Cases: <span class="Count"><%= summary.NewRecovered%></span></h2>
+        </div>
+        <div>
+            <img class="countIcons" src="../../styles/images/tombstone.png" alt="" style="height: 7em;">
+            <h2 class="dash-h2 deaths">Total Confirmed Deaths: <span class="Count"> <%= summary.TotalDeaths%></span></h2>
+            <h2 class="dash-h2 deaths">Newly Confirmed Deaths: <span class="Count"> <%= summary.NewDeaths%></span></h2>
+        </div>
+    </div>
+</section>
+<h2  class="dashbordH2" >Top ten most-affected countries</h2>
+
+<div class="containerCanvas" >
+
+
+    <section id="canvas" data-aos="fade-right">
         <canvas id="myChart"></canvas>
     </section>
+
+    <section id="canvas3" data-aos="fade-left">
+        <canvas id="myChart3"></canvas>
+    </section>
+</div>
+    <section id="tableSection"  data-aos="zoom-in">
+
+        <h2  class="dashbordH2" >  Reported Cases and Deaths by Country</h2>
+
+          <table id="myTable" class="display" style="width:90%">
+                   <thead id="table-head">
+                <tr>
+                   <th>Cuntry Name</th>
+                   <th>Total Confirmed</th>
+                   <th>Total Deaths</th>
+                   <th>Total Recovered</th>
+                     </tr>
+             </thead>
+             <tbody>
+               <%countries.forEach(val => {%>
+                <tr>
+                  <td class="row"><%= val.Country%></td>
+                  <td class="row" ><%= val.TotalConfirmed%></td>
+                  <td class="row" ><%= val.TotalDeaths%></td>
+                  <td class="row" ><%= val.TotalRecovered %></td>
+                      </tr>
+                <%})%>
+          </table>
+     
+    </section>
+
+    <section id="formSection">
+        <form action="/getCountry" method="post">
+            <select id="countrySelect" name="country" required>
+                <option value="default">Select Country</option>
+                <%countries.forEach(val => {%>
+                <option value="<%= val.Country%>" ><%= val.Country%></option>
+                <%})%>
+            </select>
+            <input id="submitBtn" type="submit" value="Show Results" id="showChart">
+        </form>
+    </section>
+
     <section id="canvas2">
         <canvas id="myChart2"></canvas>
     </section>
-    <section id="tableSection">
-        <table>
-            
-            <tr>
-              <th>Total Confirmed</th>
-              <th>Total Deaths</th>
-              <th>Total Recovered</th>
-              <th>Date</th>
-            </tr>
-            <%countryArr.forEach(val => {%>
-            <tr>
-            <td><%= val.Confirmed%></td>
-            <td><%= val.Deaths%></td>
-            <td><%= val.Recovered%></td>
-            <td><%= val.Date %></td>
-            <tr>
-            <%})%>
-          </table>
-    </section>
+    
+<%- include('../partials/footer')%>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script type='text/javascript'>
         var allCountries =<%-JSON.stringify(countries) %>
         var selectedCo =<%-JSON.stringify(countryArr) %>
 
     </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="../script/test.js"></script>
+    <script src="../script/header.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

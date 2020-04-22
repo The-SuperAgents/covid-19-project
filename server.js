@@ -30,6 +30,8 @@ app.get('/advice', adviceRedirect);
 app.get('/update/:commentId', updateCommentHandler);
 app.put('/updateComment/:updateId', updateHandler);
 app.delete('/delete/:deleteId', deleteHandler);
+app.get('/information', infoHandler);
+app.get('/', homepageHandler);
 //advice
 
 function adviceRedirect (request, response){
@@ -59,7 +61,7 @@ function homepageHandler(request, response) {
 }
 
 // C.F
-let imgPlaceholder = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMnAsE8O7pmDjG3GjTKET3-6m9cI-8V86mVHMQTjS1yOfEjykr&usqp=CAU';
+let imgPlaceholder = 'styles/images/Coronavirus_News.png';
 function News (data) {
   this.author = data.author || '';
   this.title = data.title || '';
@@ -181,6 +183,11 @@ function deleteHandler(request, response) {
     .then(() => {
       response.redirect('/advice');
     });
+}
+
+// Hanlde Info Page
+function infoHandler(request, response) {
+  response.render('./pages/information');
 }
 
 //==========(error handlers)===========\\

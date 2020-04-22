@@ -1,63 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covid-19 WebApp</title>
-</head>
+
+<%- include('partials/head')%>
+<link rel="stylesheet" href="../styles/Hanimation.css">
+
 <body>
-    <header>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/advice">advice</a>
+    <!-- ************************(mobile view header)************************** -->
+    <header class="default-color" id="navbar">
+        <img id="logo"
+            src="https://p2.hiclipart.com/preview/786/850/421/coronavirus-covid-covid19-line-png-clipart-thumbnail.jpg"
+            alt="logo">
+        <h1 id="h1">Covid-19</h1>
+        <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span
+                class="bottom"></span></div>
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                <ul>
+                    <li><a class="a" href="/">Home</a></li>
+                    <li><a class="a" href="/dashboard">Dashboard</a></li>
+                    <li><a class="a" href="/advice">Advice</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
     </header>
-    <main>
-        
-    <h1>Working!</h1>
-        <!-- data-aos="fade-up" data-aos-duration="3000" -->
-        <section class="fade-in">
-            inro
-        </section>
-        <div id="section1" class="mainSections" >
-            <h2>
-            </h2>
-            <p>
-            </p>
-            <p>
-            </p>
+    <!-- *******************************(desktop view)********************************** -->
+    <nav id="desktop-nav">
+        <div id="containerLogo">
+            <a href="/" id="logoLink"> <img id="logo" src="../styles/images/oie_trans.gif"
+                    alt="logo">
+            </a>
+            <h4 id="logo-title">COVID-19 HUB</h4>
         </div>
-        <div id="section2" class="mainSections">
-            <h2>
-            </h2>
-            <p>
-            </p>
-            <p>
-                
-            </p>
-        </div>       
-        <div id="section3" class="mainSections"> 
-            <h2>
-            </h2>
-            <p>
-            </p>
-            <p>
-                
-            </p>
-        </div>
-        <div id="section4" class="mainSections">
+        <ul id="desktop-ul">
+            <li class="desktop-li"><a class="a" href="/">Home</a></li>
+            <li class="desktop-li"><a class="a" href="/dashboard">Dashboard</a></li>
+            <li class="desktop-li"><a class="a" href="/advice">Advice</a></li>
 
-
-            <%newsResule.forEach( val =>{%>
-
-                <div class="news">
-                   <a href="<%= val.url%>"> <h3><%= val.title%></h3></a>
-                   <p><%= val.author%></p>
-                   <img src="<%= val.urlToImage%>" alt=""> 
-                   <p><%= val.description%></p> 
+        </ul>
+    </nav>
+    <header id="desktop-header">
+        <div id="h1container">
+            <!-- <h1 id="h1"></h1> -->
+            <div class="stage">
+                <div class="wrapper">
+                    <div class="slash"></div>
+                    <div class="sides">
+                        <div class="side"></div>
+                        <div class="side"></div>
+                        <div class="side"></div>
+                        <div class="side"></div>
+                    </div>
+                    <div class="text">
+                        <div class="text--backing">Covid19Hub</div>
+                        <div class="text--left">
+                            <div class="inner">Covid19Hub</div>
+                        </div>
+                        <div class="text--right">
+                            <div class="inner">Covid19Hub</div>
+                        </div>
+                    </div>
                 </div>
-           <% })%>
-           
-        </div>       
+            </div>
+            <!-- the quote -->
+        </div>
+        <div id="gif-container">
+            <p>The Solution is Literally and Figuratively <br>
+                <strong><i> In Our Hands </i></strong>
+            </p>
+        </div>
+    </header>
+
+    <!-- *********************************************************************************** -->
+
+    <main>
+
+        <div class="allcontainer">
+            <section class="home-content defintion">
+                <h3 class="title-content">what is covid-19?</h3>
+
+                <div class="img-p">
+                    <div>
+
+                        <img src="https://www.feppd.eu/wp-content/uploads/2020/03/visuel_covid19.jpg"
+                            alt="paragraph image">
+                    </div>
+
+                    <p class="p-content">Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe
+                        acute
+                        respiratory
+                        syndrome
+                        coronavirus 2 (SARS-CoV-2).
+
+                        The disease was first identified in December 2019 in Wuhan, the
+                        capital
+                        of
+                        China's Hubei province, and has since spread globally, resulting in the ongoing 2019–20
+                        coronavirus
+                        pandemic.
+
+                        <span id="read" class="readmore">First confirmed case of what was then an unknown coronavirus
+                            was traced
+                            back to
+                            November
+                            2019
+                            in Hubei province.Common symptoms include fever, cough, and shortness of breath.Other
+                            symptoms
+                            may
+                            include fatigue, muscle pain, diarrhea, sore throat, loss of smell, and abdominal pain.The
+                            time
+                            from
+                            exposure to onset of symptoms is typically around five days but may range from two to
+                            fourteen
+                            days.
+                        </span>
+                        <a id="readmore">Show More</a>
+                    </p>
+                </div>
+            </section>
+            <section class="home-content symptoms gray">
+                <div class="twoContent">
+                    <h3 class="title-content h3Sub">Symptoms</h3>
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Symptoms_of_coronavirus_disease_2019_3.0.svg/512px-Symptoms_of_coronavirus_disease_2019_3.0.svg.png"
+                        alt="symptoms">
+                </div>
+                <div class="twoContent">
+                    <h3 class="title-content h3Sub">Flatten The Carve</h3>
+                    <img src="styles/images/covid.gif" alt="flattern the carve">
+                </div>
+            </section>
+            <section class="home-content covid-video-container">
+                <h3 class="title-content">Learn more about covid-19</h3>
+
+                <iframe id="ifram" src="https://www.youtube.com/embed/BtN-goy9VOY" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </section>
+            <section class="website-pages">
+                <a href="/dashboard">
+                    <div class="website-pages-1 gray">
+                        <div class="website-pages-1-2">
+                            <h3 class="title-content">Dashboard
+                            </h3>
+
+                            <p class="p-content">
+                                <ul class="ul-dashboard">
+                                    <li class="li-p"> Latest and Updated Global and Local Statistics</li>
+                                    <li class="li-p"> Data Visualization Using Charts</li>
+                                    <li class="li-p">Tabulated Information</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <img src="styles/images/dashboard.png" alt="">
+                    </div>
+                </a>
+                <a href="/advice">
+                    <div class="website-pages-1">
+                        <div class="website-pages-1-2">
+                            <h3 class="title-content">Advice</h3>
+
+                            <p class="p-content">
+                                <ul class="ul-dashboard">
+                                    <li class="li-p"> Videos </li>
+                                    <li class="li-p"> General Advice and Protection from WHO
+                                    </li>
+                                    <li class="li-p">Leave a Comment and Share and Advice </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <img src="styles/images/article(1).png" alt="">
+                    </div>
+                </a>
+        </div>
+        </section>
+        </div>
+
+        <div id="section4" class="mainSections">
+            <%- include('partials/news')%>
+        </div>
     </main>
-    <footer></footer>
+
+    <div class="mobile">
+        Copyright © 2020 Nextend. All rights reserved.
+    </div>
+
+    <%- include('partials/footer')%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="./script/header.js"></script>
+    <script src="../script/Hanimation.js"></script>
+    <script src="./script/news.js"></script>
 </body>
+
 </html>

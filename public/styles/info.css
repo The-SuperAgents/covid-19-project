@@ -1,0 +1,50 @@
+.container{
+  display: grid;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  justify-items: center;
+  align-items: center;
+}
+
+.adviceSections{
+   /* height: 80vh; */
+   width: 90%;
+   padding: 3% 1%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   /* border-radius: 5%; */
+   background-color: #35353566;
+}
+
+.videos{
+   display: flex;
+   border: 50%;
+   justify-content: space-evenly;
+}
+
+
+#firstVedio , #secVedio {
+   height: 50vh;
+   width: 40%;
+}
+
+.photos{
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
+
+.imgs{
+   height: 50vh;
+   width: 25%;
+    margin: 1em; 
+   /* transition: 0.8s all ease-in-out; */
+
+}
+
+.imgs:hover{
+
+   box-shadow: 10px 10px 5px rgb(0, 0, 0);
+   /* cursor: pointer; */
+   /* transform: scale(0.7); */
+}
