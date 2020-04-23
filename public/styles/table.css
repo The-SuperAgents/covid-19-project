@@ -65,7 +65,7 @@ margin-bottom: 3em;
     font-size: xx-large;
     text-decoration-style: solid;
     text-decoration-thickness: 2px;
-    color: rgb(86, 221, 221);
+    color: #59B3D9;
     font-size: 3em;
     margin: 0;
 }
@@ -134,30 +134,33 @@ justify-content: space-around;
 }
 
 #canvas , #canvas3{
-  width: 45%;
+  width: 95%;
+    margin: 5em;
+    
     background-color: #2d2d2d;
     margin: 0 auto;
     color: white;
-    box-shadow: 1px 1px 10px 3px #888888;
+    /* box-shadow: 1px 1px 10px 3px #888888; */
    
 }
 
 
 .containerCanvas{
+  background: #2D2D2D;
+  width: 80%;
   display: flex;
-    background: #2D2D2D;
-    width: 80%;
-    border-radius: 1em;
-    padding: 2em 0em;
-    box-shadow: 3px 3px 10px 0px #888888;
-    margin-left: auto;
-    margin-top: 5.5em;
-    margin-right: auto;
+  flex-direction: column;
+  border-radius: 1em;
+  padding: 2em 0em;
+  box-shadow: 3px 3px 10px 0px #888888;
+  margin-left: auto;
+  margin-top: 5.5em;
+  margin-right: auto;
 
 }
 .dashbordH2{
   text-align: center;
-  color: #FFFFFF;
+  color: #59B3D9;
   margin-top: 3.5em;
   margin-bottom: .5em;
   font-size: 3em;
@@ -307,6 +310,7 @@ margin-top: 1.4em;
   }
   #myChart ,   #myChart3 {
     height: 10em !important;
+    width: 100%;
   }
   
   /* .containerCanvas{
