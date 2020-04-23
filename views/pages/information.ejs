@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head')%>
+
+<body>
+  <%- include('../partials/header')%>
+    <main>
+      <div class="container">
+        <section class="adviceSections videos">
+          <iframe id="firstVedio" width="560" height="315" src="https://www.youtube.com/embed/oGruT7Fd54E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe id="secVedio" width="560" height="315" src="https://www.youtube.com/embed/Trt7VIMV7jU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+    
+        <section class="intro">  
+          <div class="content">
+            <h1>You can create full screen sections without javascript.</h1>
+            <p>The height is set to 90vh, that means 90% height.</p>
+         </div>
+        </section>
+        
+        <section>  
+          <div class="content">
+            <h1>Resize your browser and see how they adapt.</h1>
+         </div>
+        </section>
+        
+        <section>  
+          <div class="content">
+            <h1>It's amazing and fast.</h1>
+         </div>
+        </section>
+        
+        <section>  
+          <div class="content">
+            <h1>See the <a href="http://caniuse.com/#feat=viewport-units">browser support.</a></h1>
+         </div>
+        </section>
+        </section>
+        </main>
+<%- include('../partials/footer')%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../script/header.js"></script>
+</body>
+</html>

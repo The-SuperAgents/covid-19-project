@@ -1,0 +1,352 @@
+@media(min-width: 769px){
+
+#myTable{
+  box-shadow: 1px 2px 7px 4px #888888;
+
+}
+#table-head{
+  background: linear-gradient(to right, rgba(48, 207, 208, 0.4) 0%, rgb(154, 51, 253) 140%) rgb(32, 32, 32) !important;
+
+}
+.row{
+    color: black ;
+
+}
+
+#myTable_filter > label {
+    display: inline-table;
+margin-right: 5em;
+margin-top: 5em;
+color: white;
+margin-bottom: 1.5em;
+
+}
+#myTable_length > label {
+    display: inline-table;
+margin-left: 5em;
+margin-top: 5em;
+color: white
+} 
+#myTable_info {
+    color: white;
+margin-left: 5em;
+}
+#myTable_previous{
+    color: white !important;
+    
+}
+.paginate_button {
+    color: white;
+}
+#myTable_next{
+    color: white !important ;
+    margin-right: 3em;
+margin-bottom: 3em;
+}
+
+/* the global section */
+/* Dashboard Page CSS */
+.dash-section {
+  background-color: #2D2D2D;
+    box-shadow: 0px 2px 6px 2px #888888;
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    text-align: center;
+    border-radius: 1em;
+    box-sizing: border-box;
+
+
+  }
+  #dash-h1, .dash-h2 {
+    color: #fff;
+  }
+  #dash-h1 {
+    font-size: xx-large;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+    color: #59B3D9;
+    font-size: 3em;
+    margin: 0;
+}
+  }
+  .dash-h2 {
+    padding: 3%;
+  }
+  .dash-h2.confirmed {
+    display: inline-flex;
+  }
+  .dash-h2.deaths {
+    display: inline-flex;
+  }
+  .dash-h2.recovered {
+    display: inline-flex;
+  }
+  .Count {
+    margin-left: 0.3em;
+ 
+  }
+  #countrySelect {
+    padding: 13px;
+    border-radius: 2%;
+    margin: 1em;
+    font-family: unset;
+    border: none;
+    font-weight: 500;
+    font-size: larger;
+    margin-bottom: 3em;
+
+  }
+  #info-submit {
+    margin-top: 1.5em;
+  }
+  #info-submit:hover {
+    background-color: #5492e9cb;
+  }
+  #info-submit {
+    transition: 0.3s all ease-in-out;
+  }
+  .dash-section {
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    top: 13%;
+    padding: 2em;
+    margin-right: auto;
+
+  }
+  
+/* icons */
+.globalSummary{
+display: flex;
+justify-content: space-around;
+}
+
+
+/* ========canvas=========== */
+#canvas2 {
+  width: 70%;
+  background-color: #2d2d2d;
+  margin: 0 auto;
+  color: white;
+  box-shadow: 4px 3px 6px 0px #888888;
+  margin-bottom: 3em;
+}
+
+#canvas , #canvas3{
+  width: 95%;
+    margin: 5em;
+    
+    background-color: #2d2d2d;
+    margin: 0 auto;
+    color: white;
+    /* box-shadow: 1px 1px 10px 3px #888888; */
+   
+}
+
+
+.containerCanvas{
+  background: #2D2D2D;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  padding: 2em 0em;
+  box-shadow: 3px 3px 10px 0px #888888;
+  margin-left: auto;
+  margin-top: 5.5em;
+  margin-right: auto;
+
+}
+.dashbordH2{
+  text-align: center;
+  color: #59B3D9;
+  margin-top: 3.5em;
+  margin-bottom: .5em;
+  font-size: 3em;
+}
+/* ========================= */
+
+#formSection{
+  text-align: center;
+}
+
+#submitBtn{
+background: linear-gradient(to right, rgba(48, 207, 208, 0.4) 0%, rgb(154, 51, 253) 140%) rgb(32, 32, 32);
+margin-top: 1.4em;
+}
+
+}
+
+@media(min-width: 360px) and (max-width: 768px){
+  #myTable{
+    box-shadow: 1px -3px 10px 10px #888888;
+  
+  }
+  .row{
+      color: black ;
+  
+  }
+  
+  #myTable_filter > label {
+      display: inline-table;
+  margin-right: 5em;
+  margin-top: 5em;
+  color: white;
+  margin-bottom: 1.5em;
+  
+  }
+  #myTable_length > label {
+      display: inline-table;
+  margin-left: 5em;
+  margin-top: 5em;
+  color: white
+  } 
+  #myTable_info {
+      color: white;
+  margin-left: 5em;
+  }
+  #myTable_previous{
+      color: white !important;      
+  }
+  .paginate_button {
+      color: white;
+  }
+  #myTable_next{
+      color: white !important ;
+      margin-right: 3em;
+  margin-bottom: 3em;
+  }
+  
+  /* the global section */
+  /* Dashboard Page CSS */
+  .dash-section {
+      display: flex;
+      justify-content: center;
+      margin-top: 7%;
+      text-align: center;
+    }
+    #dash-h1, .dash-h2 {
+      color: #fff;
+    }
+    #dash-h1 {
+      font-size: xx-large;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 2px;
+      color: rgb(86, 221, 221);
+    }
+    .dash-h2 {
+      padding: 0%;
+      
+    }
+    /* .dash-h2.confirmed {
+      display: inline-flex;
+    }
+    .dash-h2.deaths {
+      display: inline-flex;
+    }
+    .dash-h2.recovered {
+      display: inline-flex;
+    } */
+    .Count {
+      margin-left: 0.3em;
+   
+    }
+    #countrySelect {
+      padding: 2px;
+      border-radius: 2%;
+      margin: 1em;
+      font-family: unset;
+      border: none;
+      color: blue;
+      font-weight: 500;
+      font-size: larger;
+      width: 11em;
+    }
+    #info-submit {
+      margin-top: 1.5em;
+    }
+    #info-submit:hover {
+      background-color: #5492e9cb;
+    }
+    #info-submit {
+      transition: 0.3s all ease-in-out;
+    }
+    .dash-section {
+      margin-bottom: 5em;
+    }
+    
+  /* ================icons================ */
+  .globalSummary{
+  display: flex;
+  justify-content: space-around;
+  }
+
+  .countIcons{
+    width: 3em;
+    height: 3em !important;
+  }
+  
+  
+  /* ========canvas=========== */
+  #canvas2 {
+    width: 100%;
+    background-color: #2d2d2d;
+    margin: 0 auto;
+    color : white;
+    box-shadow: 5px 10px 8px 3px #888888;
+    margin-bottom: 3em;
+    height: 16em;
+  }
+  
+  #canvas , #canvas3{
+    width: 100%;
+    background-color: #2d2d2d;
+    margin: 0 auto;
+    color : white;
+    box-shadow: 5px 10px 8px 3px #888888;
+    margin-bottom: 3em;
+  }
+  #myChart ,   #myChart3 {
+    height: 10em !important;
+    width: 100%;
+  }
+  
+  /* .containerCanvas{
+  display: flex;
+  } */
+  /* ========================= */
+  
+  #formSection{
+    text-align: center;
+  }
+  
+  #submitBtn{
+  background: linear-gradient(to right, rgba(48, 207, 208, 0.4) 0%, rgb(154, 51, 253) 140%) rgb(32, 32, 32);
+  margin: 2em;
+  }
+
+  /* =======table========= */
+  #tableSection{
+  overflow: hidden;
+}
+.dataTables_length{
+  display: inline-block;
+}
+.dataTables_length{
+  display: inline-block;
+}
+.dataTables_wrapper .dataTables_filter {
+  margin-top: -3.5em !important;
+}
+.dataTables_wrapper .dataTables_paginate {
+  margin-top: 0.5em;
+  font-size: 10px !important;
+  margin-left: 1em !important;
+}
+#myTable_info {
+  color: white;
+  margin-left: 2em !important;
+}
+}
