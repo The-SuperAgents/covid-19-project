@@ -12,7 +12,7 @@ const sortArray = (arr) => {
 let sortedArray = sortArray(allCountries);
 let topTwentyCounties=[];
 console.log(sortedArray.length-1);
-for(let i = sortedArray.length-1 ; i > sortedArray.length-10 ;i--){
+for(let i = sortedArray.length-1 ; i > sortedArray.length-12 ;i--){
   topTwentyCounties.push(sortedArray[i]);
 }
 ////
