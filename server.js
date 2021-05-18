@@ -9,8 +9,14 @@ const cors = require('cors');
 //==========(main variebles)===========\\
 const app = express();
 const PORT = process.env.PORT || 3030;
-const client = new pg.Client(process.env.DATABASE_URL);
+const client = new pg.Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.DEV_MODE ? false : { rejectUnauthorized: false },
+});
 
+
+// const client = new pg.Client(process.env.DATABASE_URL);
+// const client = new pg.Client({ connectionString: process.env.DATABASE_URL,   ssl: { rejectUnauthorized: false } });
 //==========(express server uses)===========\\
 app.use(express.static('./public'));
 app.use(express.json());
@@ -49,7 +55,8 @@ function adviceRedirect (request, response){
 let theSelectedCountry = [];
 // Homepage handler
 function homepageHandler(request, response) {
-  let key = process.env.NEWS_KEY;
+  let key = '3cf6d8ff54464bf3919350313b64b96d';
+
   let url = `http://newsapi.org/v2/everything?q=covid19&sortBy=publishedAt&apiKey=${key}`;
   superagent.get(url)
     .then(newsResult=>{
