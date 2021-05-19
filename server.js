@@ -169,6 +169,7 @@ function updateCommentHandler(request, response) {
     });
 }
 
+
 //Handle update
 function updateHandler(request, response) {
   let id = request.params.updateId;
